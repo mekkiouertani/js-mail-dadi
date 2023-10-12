@@ -16,6 +16,8 @@ const emailVerified = ["ciao@gmail.com", "mekki@gmail.com", "boolean@outlook.it"
 const button = document.getElementById('btn-submit');
     //aggiungiamo una variabile di controllo
 let founded = false;
+    //prendiamo il div dove inseriremo la risposta della verificazione
+const boxAnswer = document.querySelector('.answer');
     //aggiungiamo eventListener
 button.addEventListener('click',
         function(){
@@ -23,24 +25,22 @@ button.addEventListener('click',
         emailUser = document.getElementById('user-email').value;
                 console.log(emailUser);
             //aggiungiamo ciclo For per constare se la mail è nella lista
-        for (let i = 0; i < emailVerified.lenght; i++); {
+        for (let i = 0; i < emailVerified.lenght; i++) {
                 let emailToVerified = emailVerified[i];
                 if (emailToVerified === emailUser){
-                founded = true
-                console.log(emailToVerified);
+                founded = true;
+                        console.log(emailToVerified);
                 }
-        }  //verifichiamo che la mail sia registrata nel sistema
-        if(founded){
-            const boxAnswer = document.querySelector('.answer');
+        }  //verifichiamo che la mail sia registrata nel sistema e stampiamo il messaggio
+        if(founded) {
             boxAnswer.innerHTML = `Login effettuato`
-        }   else{
-            const boxAnswer = document.querySelector('.answer');
+        }   else    {
             boxAnswer.innerHTML = `Email non registrata`;
         }
-
-        }
+    }
 )
 
 //consoleLOG
 console.log(button);
 console.log(emailVerified);
+
