@@ -36,8 +36,9 @@ button.addEventListener('click',function(){
     //verifichiamo che la mail sia registrata nel sistema e stampiamo il messaggio
     if(founded) {
         boxAnswer.innerHTML = `Login effettuato`;
+        let resetTextEmail = document.getElementById('user-email').value= '';
     }   else    {
-        boxAnswer.innerHTML = `Inserisci una email valida <br> prova con <em>"boolean@outlook.com"</em>`;
+        boxAnswer.innerHTML = `Inserisci una email valida <br> prova con <em>"boolean@outlook.it"</em>`;
     }
 })
 
