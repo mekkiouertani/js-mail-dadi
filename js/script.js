@@ -33,7 +33,7 @@ button.addEventListener('click',
                 }
         }  //verifichiamo che la mail sia registrata nel sistema e stampiamo il messaggio
         if(founded) {
-            boxAnswer.innerHTML = `Login effettuato`
+            boxAnswer.innerHTML = `Login effettuato`;
         }   else    {
             boxAnswer.innerHTML = `Email non registrata`;
         }
