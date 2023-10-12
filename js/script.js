@@ -11,7 +11,7 @@
 //mail
   //variabili e constanti
     //inseriamo le email già registrate nel sistema
-const emailVerified = ["ciao@gmail.com", "boolean@outlook.it", "mekki@gmail.com"];
+const emailVerified = ["ciao@gmail.com", "mekki@gmail.com", "boolean@outlook.it"];
     //prendiamo il bottone invio
 const button = document.getElementById('btn-submit');
     //aggiungiamo una variabile di controllo
@@ -24,7 +24,7 @@ button.addEventListener('click',
                 console.log(emailUser);
             //aggiungiamo ciclo For per constare se la mail è nella lista
         for (let i = 0; i < emailVerified.lenght; i++); {
-                let emailToVerified = emailVerified[1];
+                let emailToVerified = emailVerified[i];
                 if (emailToVerified === emailUser){
                 founded = true
                 console.log(emailToVerified);
@@ -41,7 +41,6 @@ button.addEventListener('click',
         }
 )
 
-
-
 //consoleLOG
 console.log(button);
+console.log(emailVerified);
