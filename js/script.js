@@ -47,14 +47,13 @@ button.addEventListener('click',function(){
         resetTextEmail.value= '';
     }   else    {
         boxAnswer.classList ='bg-danger p-0 mt-1 text-white';
-        boxAnswer.innerHTML = `Inserisci una email valida <br> 
-        prova con <em>"boolean@outlook.it"</em>`;
+        boxAnswer.innerHTML = `Inserisci una email valida`;
         //creiamo un 'p' e gli diamo le classsi
         const tryWith = document.createElement('p');
-        tryWith.classList= 'bg-primary text-black';
+        tryWith.classList= 'bg-primary';
         //appendiamo il 'p' dentro il 'div'e ci scriviamo dentro
         boxAnswer.append(tryWith);
-        tryWith.hinnerText = `lorem`;
+        tryWith.innerHTML = `prova con <em>"boolean@outlook.it"</em>`;
         console.log(tryWith);
     }
 });
