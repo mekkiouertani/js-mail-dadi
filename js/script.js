@@ -64,23 +64,28 @@ buttonRst.addEventListener('click', function(){
 });
 
 
-
-
-
 //DICE
     //creare sull'html i 2 giocatori e il bottone
     //dichiarare le variabili e const su js
     //aggiungere funzione del tasto per giocare
 
 //dichiariamo le costanti
-const playerUser = document.getElementById('player-two');
-const playerPc = document.getElementById('player-two');
-const buttonPlay = document.getElementById('playgame');
+const playerUser = document.getElementById('player-one');
+const playerBot = document.getElementById('player-two');
+const buttonGame = document.getElementById('playgame');
 
 //creiamo la funzione eventlistener
-buttonPlay.addEventListener('click', function(){
-
-})
+buttonGame.addEventListener ('click', function(){
+    //assegniamo un numero casuale ai player
+    const diceUser = getRndInteger(1,6);
+    const diceBot = getRndInteger(1,6);
+    //scriviamo il numero dentro ai rispettivi box
+    playerUser.innerHTML = diceUser;
+    playerBot.innerHTML = diceBot;
+    
+   
+    console.log(diceUser, diceBot);
+});
 
 
 
@@ -88,6 +93,7 @@ buttonPlay.addEventListener('click', function(){
 
 
 //consoleLOG
-console.log(playerUser, playerPc);
+console.log(playerUser, playerBot);
+console.log(buttonGame);
 
 
