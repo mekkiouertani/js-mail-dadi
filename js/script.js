@@ -3,6 +3,11 @@
     //creare array con le email certificate
     //creare condizione se la mail è certificato o meno 
 
+//utility
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
 //inseriamo le email già registrate nel sistema
 const emailVerified = [
     "ciao@gmail.com", 
@@ -34,7 +39,7 @@ button.addEventListener('click',function(){
             console.log(emailToVerified);
         }
     } 
-
+    
     //verifichiamo che la mail sia registrata nel sistema e stampiamo il messaggio
     if(founded) {
         boxAnswer.innerHTML = `Login effettuato`;
