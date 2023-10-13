@@ -51,10 +51,9 @@ button.addEventListener('click',function(){
         //creiamo un 'p' e gli diamo le classsi
         const tryWith = document.createElement('p');
         tryWith.classList= 'bg-primary';
-        //appendiamo il 'p' dentro il 'div'e ci scriviamo dentro
+        //appendiamo il 'p' dentro il 'div' e ci scriviamo dentro
         boxAnswer.append(tryWith);
         tryWith.innerHTML = `prova con <em>"boolean@outlook.it"</em>`;
-        console.log(tryWith);
     }
 });
 
@@ -64,5 +63,31 @@ buttonRst.addEventListener('click', function(){
     boxAnswer.innerHTML = '';
 });
 
+
+
+
+
 //DICE
-    //
+    //creare sull'html i 2 giocatori e il bottone
+    //dichiarare le variabili e const su js
+    //aggiungere funzione del tasto per giocare
+
+//dichiariamo le costanti
+const playerUser = document.getElementById('player-two');
+const playerPc = document.getElementById('player-two');
+const buttonPlay = document.getElementById('playgame');
+
+//creiamo la funzione eventlistener
+buttonPlay.addEventListener('click', function(){
+
+})
+
+
+
+
+
+
+//consoleLOG
+console.log(playerUser, playerPc);
+
+
