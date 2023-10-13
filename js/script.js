@@ -42,22 +42,28 @@ button.addEventListener('click',function(){
     
     //verifichiamo che la mail sia registrata nel sistema e stampiamo il messaggio
     if(founded) {
+        boxAnswer.classList ='bg-success p-0 mt-1 text-white';
         boxAnswer.innerHTML = `Login effettuato`;
         resetTextEmail.value= '';
     }   else    {
+        boxAnswer.classList ='bg-danger p-0 mt-1 text-white';
         boxAnswer.innerHTML = `Inserisci una email valida <br> 
         prova con <em>"boolean@outlook.it"</em>`;
+        //creiamo un 'p' e gli diamo le classsi
+        const tryWith = document.createElement('p');
+        tryWith.classList= 'bg-primary text-black';
+        //appendiamo il 'p' dentro il 'div'e ci scriviamo dentro
+        boxAnswer.append(tryWith);
+        tryWith.hinnerText = `lorem`;
+        console.log(tryWith);
     }
-})
+});
 
 //aggiungiamo funzione per il reset button
 buttonRst.addEventListener('click', function(){
     resetTextEmail.value= '';
     boxAnswer.innerHTML = '';
-})
+});
 
-//consoleLOG
-console.log(button);
-console.log(buttonRst);
-console.log(emailVerified);
-
+//DICE
+    //
