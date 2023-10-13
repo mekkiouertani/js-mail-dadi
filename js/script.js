@@ -98,13 +98,3 @@ buttonGame.addEventListener ('click', function(){
     }   
 });
 
-
-
-
-
-
-//consoleLOG
-/* console.log(playerUser, playerBot);
-console.log(buttonGame); */
-console.log(finalResult);
-
