@@ -73,7 +73,7 @@ buttonRst.addEventListener('click', function(){
 const playerUser = document.getElementById('player-one');
 const playerBot = document.getElementById('player-two');
 const buttonGame = document.getElementById('playgame');
-
+const finalResult = document.getElementById('result');
 //creiamo la funzione eventlistener
 buttonGame.addEventListener ('click', function(){
     //assegniamo un numero casuale ai player
@@ -83,8 +83,19 @@ buttonGame.addEventListener ('click', function(){
     playerUser.innerHTML = diceUser;
     playerBot.innerHTML = diceBot;
     
-   
-    console.log(diceUser, diceBot);
+    if (diceUser > diceBot) {
+    finalResult.innerHTML = `Grande! Ho vinto!`;
+    finalResult.classList.add ('text-right', 'bg-success', 'px-5', 'text-white');
+    finalResult.classList.remove ('bg-info','text-left','bg-danger','text-center');
+    }   else if (diceUser < diceBot) {
+        finalResult.innerHTML = `Mi spiace ma ha vinto il computer :('`;
+        finalResult.classList.add ('text-left', 'bg-danger', 'px-5', 'text-white');
+        finalResult.classList.remove ('bg-success','text-right','bg-info','text-center');
+    }   else    {
+        finalResult.innerHTML = `Mhmmm un pareggio! Credi nel destino?`;
+        finalResult.classList.add ('px-5', 'text-white', 'text-center','bg-info');
+        finalResult.classList.remove ('bg-success','text-right','bg-danger','text-left');
+    }   
 });
 
 
@@ -93,7 +104,7 @@ buttonGame.addEventListener ('click', function(){
 
 
 //consoleLOG
-console.log(playerUser, playerBot);
-console.log(buttonGame);
-
+/* console.log(playerUser, playerBot);
+console.log(buttonGame); */
+console.log(finalResult);
 
