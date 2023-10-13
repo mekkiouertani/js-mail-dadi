@@ -1,7 +1,7 @@
 //MAIL
     //creare il form per la email nell'html
     //creare array con le email certificate
-    //creare condizione se la mail è certificato o meno (far apparire messaggio adeguato)
+    //creare condizione se la mail è certificato o meno 
 
 //inseriamo le email già registrate nel sistema
 const emailVerified = [
@@ -17,6 +17,8 @@ const buttonRst = document.getElementById('btn-reset');
 let founded = false;
 //prendiamo il div dove inseriremo la risposta della verificazione
 const boxAnswer = document.querySelector('.answer');
+//reset per la frase di risposta della verificazione
+let resetTextEmail = document.getElementById('user-email');
 
 //aggiungiamo eventListener
 button.addEventListener('click',function(){
@@ -36,15 +38,17 @@ button.addEventListener('click',function(){
     //verifichiamo che la mail sia registrata nel sistema e stampiamo il messaggio
     if(founded) {
         boxAnswer.innerHTML = `Login effettuato`;
-        let resetTextEmail = document.getElementById('user-email').value= '';
+        resetTextEmail.value= '';
     }   else    {
-        boxAnswer.innerHTML = `Inserisci una email valida <br> prova con <em>"boolean@outlook.it"</em>`;
+        boxAnswer.innerHTML = `Inserisci una email valida <br> 
+        prova con <em>"boolean@outlook.it"</em>`;
     }
 })
 
 //aggiungiamo funzione per il reset button
 buttonRst.addEventListener('click', function(){
-    let resetTextEmail = document.getElementById('user-email').value= '';
+    resetTextEmail.value= '';
+    boxAnswer.innerHTML = '';
 })
 
 //consoleLOG
